@@ -35,7 +35,7 @@ Users can submit feedback on a campaign by answering these questions. The API al
 **POST** `/campaigns`
 This endpoint allows creating a new campaign with a set of questions.
 
-#### Request
+#### REQUEST
 **Request Body (JSON)**:
 
 ```json
@@ -55,8 +55,8 @@ This endpoint allows creating a new campaign with a set of questions.
   ]
 }
 ```
-#### Response
-**Success Response (201 Created):**:
+#### RESPONSE
+**Success Response (201 Created)**:
 ```json
 {
   "id": 1,
@@ -64,7 +64,7 @@ This endpoint allows creating a new campaign with a set of questions.
   "description": "Description of the campaign"
 }
 ```
-**Error Response (4xx/5xx):**:
+**Error Response (4xx/5xx)**:
 ```json
 {
   "message": "Failed to create campaign",
@@ -77,8 +77,8 @@ This endpoint allows creating a new campaign with a set of questions.
 **POST** `/feedback`
 This endpoint allows users to submit feedback for a campaign.
 
-#### Request
-**Request Body (JSON):**:
+#### REQUEST
+**Request Body (JSON)**:
 
 ```json
 {
@@ -96,7 +96,7 @@ This endpoint allows users to submit feedback for a campaign.
   ]
 }
 ```
-#### Response
+#### RESPONSE
 **Success Response (201 Created)**:
 ```json
 {
@@ -105,7 +105,7 @@ This endpoint allows users to submit feedback for a campaign.
   "userId": 1
 }
 ```
-**Error Response (4xx/5xx):**:
+**Error Response (4xx/5xx)**:
 ```json
 {
   "message": "Internal server error"
@@ -119,10 +119,10 @@ This endpoint returns a summary of a campaign, including the number of feedbacks
 
 #### Parameters
 
-- **id (URL parameter)**: A number representing the campaign ID for which the summary is requested.
+- **id (URL parameter)**: - A number representing the campaign ID for which the summary is requested.
 
-#### Response
-**Success Response (200 OK):**:
+#### RESPONSE
+**Success Response (200 OK)**:
 ```json
 {
   "totalFeedbacks": 3,
@@ -144,7 +144,7 @@ This endpoint returns a summary of a campaign, including the number of feedbacks
   ]
 }
 ```
-**Error Response (404 Not Found)::**:
+**Error Response (404 Not Found)**:
 ```json
 {
   "message": "Campaign not found"
